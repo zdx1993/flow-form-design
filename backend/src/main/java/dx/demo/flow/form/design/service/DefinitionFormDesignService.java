@@ -2,6 +2,8 @@ package dx.demo.flow.form.design.service;
 
 import dx.demo.flow.form.design.entity.DefinitionFormDesign;import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @description: 动态表单定义service
  * @author: zhang.da.xin
@@ -18,6 +20,8 @@ public interface DefinitionFormDesignService {
     int insertSelective(DefinitionFormDesign record);
 
     DefinitionFormDesign selectByPrimaryKey(String id);
+
+    List<DefinitionFormDesign> selectAll();
 
     int updateByPrimaryKeySelective(DefinitionFormDesign record);
 
