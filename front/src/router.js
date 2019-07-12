@@ -14,13 +14,42 @@ export default new Router({
       name: 'entry', //业务入口页面
       component: Entry,
       children: [
-        // 自动以表单相关页面---开始
+        // 动态表单相关页面---开始
         {
           path: 'form_list',
           name: 'form_list',
           component: () => import('./views/flwo_form_design/List.vue')
-        }
-        // 自动以表单相关页面---结束
+        },
+        {
+          path: 'form_details',
+          name: 'form_details',
+          component: () => import('./views/flwo_form_design/FormDetails.vue')
+        },
+        // 动态表单相关页面---结束
+        // 发起流程页面---开始
+        { //起始页
+          path: 'demo_entry',
+          name: 'demo_entry',
+          component: () => import('./views/business/leave/DemoEntry.vue')
+        },
+        { //表单申请页
+          path: 'start_page',
+          name: 'start_page',
+          component: () => import('./views/business/leave/startPage.vue')
+        },
+        // 发起流程页面---结束
+        // 流程审核页面---开始
+        { //审核列表页
+          path: 'apply_list',
+          name: 'apply_list',
+          component: () => import('./views/business/applyLeave/ApplyList.vue')
+        },       
+        { //审核详情页
+          path: 'apply_details',
+          name: 'apply_details',
+          component: () => import('./views/business/applyLeave/ApplyDetails.vue')
+        },   
+        // 流程审核页面---结束
       ]
     },
     // {

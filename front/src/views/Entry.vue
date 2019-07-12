@@ -1,12 +1,10 @@
 <template>
   <div class="entry">
-    <div class="nav">
-      <ul>
-        <li>导航栏</li>
-      </ul>
+    <div class="nav" style="background:#ddd">
+      导航栏
     </div>
     <router-view></router-view>
-    <div class="footer">
+    <div class="footer" style="background:#ddd">
       页脚
     </div>
   </div>
@@ -16,6 +14,6 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home'
+  name: 'EntryPage'
 }
 </script>

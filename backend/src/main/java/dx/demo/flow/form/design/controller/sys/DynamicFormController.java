@@ -1,4 +1,4 @@
-package dx.demo.flow.form.design.controller.admin;
+package dx.demo.flow.form.design.controller.sys;
 
 import dx.demo.flow.form.design.common.BackEntity;
 import dx.demo.flow.form.design.controller.BaseController;
@@ -37,5 +37,9 @@ public class DynamicFormController extends BaseController {
     @GetMapping("/details")
     public BackEntity getDetails(String id){
         return new BackEntity("200","请求成功",definitionFormDesignService.selectByPrimaryKey(id));
+    }
+    @PostMapping("/update_item")
+    public BackEntity updateFormItem(DefinitionFormDesign definitionFormDesign){
+        return new BackEntity("200","请求成功",definitionFormDesignService.updateByPrimaryKey(definitionFormDesign));
     }
 }
